@@ -7,7 +7,7 @@ class ListNode:
         self.next = next
 
 
-class Solution:
+class SolutionAddTwoNumbersLinkedList:
 
     def node_to_list(self, ls: Optional[ListNode]):
         result_list = []
@@ -19,7 +19,6 @@ class Solution:
             ls = ls.next
             current_value = ls.val
         return result_list
-
 
     def addTwoNumbers(self, l1: Optional[ListNode], l2: Optional[ListNode]) -> Optional[ListNode]:
         l1_reversed = self.node_to_list(l1)[::-1]
@@ -44,17 +43,17 @@ class TestAddNumbersFromReverseList:
     def test_simple_list(self):
         l1 = ListNode(2, ListNode(4, ListNode(3)))
         l2 = ListNode(5, ListNode(6, ListNode(4)))
-        actual = Solution().addTwoNumbers(l1, l2)
+        actual = SolutionAddTwoNumbersLinkedList().addTwoNumbers(l1, l2)
         expected = ListNode(7, ListNode(0, ListNode(8)))
         assert actual == expected
 
     def test_one_zero_list(self):
         l1 = ListNode(0)
         l2 = ListNode(0)
-        assert Solution().addTwoNumbers(l1, l2) == ListNode(0)
+        assert SolutionAddTwoNumbersLinkedList().addTwoNumbers(l1, l2) == ListNode(0)
 
     def test_long_list(self):
         l1 = ListNode(9, ListNode(9, ListNode(9, ListNode(9, ListNode(9, ListNode(9, ListNode(9)))))))
         l2 = ListNode(9, ListNode(9, ListNode(9, ListNode(9))))
-        assert Solution().addTwoNumbers(l1, l2) == \
+        assert SolutionAddTwoNumbersLinkedList().addTwoNumbers(l1, l2) == \
                ListNode(8, ListNode(9, ListNode(9, ListNode(9, ListNode(0, ListNode(0, ListNode(0, ListNode(1))))))))
