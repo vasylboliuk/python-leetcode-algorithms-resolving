@@ -61,5 +61,8 @@ class TestAddNumbersFromReverseList:
     def test_long_list(self):
         l1 = ListNode(9, ListNode(9, ListNode(9, ListNode(9, ListNode(9, ListNode(9, ListNode(9)))))))
         l2 = ListNode(9, ListNode(9, ListNode(9, ListNode(9))))
-        assert SolutionAddTwoNumbersLinkedList().addTwoNumbers(l1, l2) == \
-               ListNode(8, ListNode(9, ListNode(9, ListNode(9, ListNode(0, ListNode(0, ListNode(0, ListNode(1))))))))
+        actual = SolutionAddTwoNumbersLinkedList().addTwoNumbers(l1, l2)
+        expected = ListNode(8, ListNode(9, ListNode(9, ListNode(9, ListNode(0, ListNode(0, ListNode(0, ListNode(1))))))))
+        actual_list = SolutionAddTwoNumbersLinkedList().node_to_list(actual)
+        expected_list = SolutionAddTwoNumbersLinkedList().node_to_list(expected)
+        assert actual_list == expected_list
