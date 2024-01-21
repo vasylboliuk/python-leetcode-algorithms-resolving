@@ -1,1 +1,1 @@
-# solve-me-leetcode-algorithms
+# LeetCode's Algorithms Tasks Resolving.
