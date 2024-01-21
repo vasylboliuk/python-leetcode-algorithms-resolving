@@ -1,1 +1,1 @@
-# LeetCode's Algorithms Tasks Resolving.
+# LeetCode's Algorithms Tasks Resolving
